@@ -1,0 +1,35 @@
+
+#tabela{
+    position: static;
+    left: 45%;
+    top: 20%;
+    
+}
+#cabecalho{
+    border-bottom: 3px #FF7F00 solid;
+    height: 58px;
+}
+#mensagem{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    left: 30%;
+}
+
+#interface{
+    font-family: Arial, sans-serif;
+    width: 900px;
+    background-color: #FFBBFF;
+    margin: 20px auto 20px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0, .5);/*Borda*/
+    padding: 20px;
+}
+
+#rodape{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border-top: 3px #FF7F00 solid;
+    height: 50px;
+}
+
+
+
