@@ -8,6 +8,7 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Calendar;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -53,12 +54,37 @@ public class MyServlet extends HttpServlet {
             m.setCiclo(ciclo);
             m.setData(data);
 
-            lista.add(m);
           
+          
+           //Metodo tranformar data
+            
+            Integer ano = new Integer(data.substring(0, 4));
+            Integer mes = new Integer(data.substring(5, 7));
+            Integer dia = new Integer(data.substring(8, 10));
+            
+            
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(ano, mes, dia);
+            
+            if(m.getCiclo().equals("Regular")){
+                calendario.add(calendario.DATE, 28);
+            }else{
+                calendario.add(calendario.DATE, 30);
+            }
+            
+            
+            int newYear = calendario.get(Calendar.YEAR);
+            int newMonth = calendario.get(Calendar.MONTH);
+            int newDay = calendario.get(Calendar.DAY_OF_MONTH);
+            
+            String dataFinal = (newDay+"/"+newMonth+"/"+newYear);
+            
+            m.setDataFinal(dataFinal);
+            lista.add(m);
+              
+            request.setAttribute("agenda", lista);
            
-           request.setAttribute("agenda", lista);
-           
-           String pagina = "/resposta.jsp";
+            String pagina = "/resposta.jsp";
            
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
             dispatcher.forward(request, response);

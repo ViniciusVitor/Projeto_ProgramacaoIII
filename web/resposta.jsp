@@ -36,7 +36,8 @@
                     <td><%= m.getNome() %></td>
                     <td><%= m.getIdade() %></td>
                     <td><%= m.getCiclo() %></td>
-                    <td><%= m.getData() %></td>
+                    <td><%= m.getDataFinal() %></td>
+                    
                     
                 </tr>
             <%

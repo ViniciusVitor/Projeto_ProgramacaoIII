@@ -30,7 +30,7 @@
                                     <option>Inregular</option>
                                 </select></h4>
 
-                            <h4>Data da última menstruação: </br><input type="text" name="data" value="" id="data"/></h4>
+                            <h4>Data da última menstruação: </br><input type="date" name="data" value="" id="data"/></h4>
                             </br>
                         </div>                      
                     </center>

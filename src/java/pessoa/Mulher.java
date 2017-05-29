@@ -14,6 +14,15 @@ public class Mulher {
     private String idade;
     private String ciclo;
     private String data;
+    private String dataFinal;
+
+    public String getDataFinal() {
+        return dataFinal;
+    }
+
+    public void setDataFinal(String dataFinal) {
+        this.dataFinal = dataFinal;
+    }
 
     public Mulher() {
         this.nome = nome;
