@@ -8,6 +8,7 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,7 +39,7 @@ public class MyServlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             
             
-            Mulher m = new Mulher();
+             Mulher m = new Mulher();
             
             String nome = request.getParameter("nome");
             String idade = request.getParameter("idade");
@@ -55,22 +56,12 @@ public class MyServlet extends HttpServlet {
             lista.add(m);
           
            
+           request.setAttribute("agenda", lista);
            
-          
+           String pagina = "/resposta.jsp";
            
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Resposta</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("Resposta"+"<br>");
-            out.println("Nome: "+lista.get(0).getNome()+"<br>");
-            out.println("Idade: "+lista.get(0).getIdade()+"<br>");
-            out.println("Ciclo: "+lista.get(0).getCiclo()+"<br>");
-            out.println("Data: "+lista.get(0).getData()+"<br>");
-            out.println("</body>");
-            out.println("</html>");
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
+            dispatcher.forward(request, response);
 
             
             
