@@ -10,9 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Formulario</title>
-        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="./css/index.css">
     </head>
-    <body background="../imagens/absorvente-interno-externo.jpg"> 
+    <body background="./imagens/absorvente-interno-externo.jpg"> 
         <form id="Formulario" action="MyServlet" method="POST">
             <div id="interface">
                 <header id="cabecalho">
@@ -31,13 +31,10 @@
 
                         <h4>Data da última menstruação: </br><input type="date" name="data" id="data"></h4>
                         </br>
-                    </div>                      
-                </center>
-
-                <div id="botoes">
-                    
-                    <input type="submit" value="Enviar respostas" name="Enviar" id="butonEnviar"/>
+                    </div>
+                    <input type="submit" value="Enviar respostas" name="Enviar" id="butonEnviar"/><br/>
                     <input type="reset" value="Limpar" name="Limpar" id="butonLimpar" />
+                </center>
    
 
                     <div>

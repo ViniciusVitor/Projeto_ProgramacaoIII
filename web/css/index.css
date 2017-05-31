@@ -17,17 +17,10 @@
 }
 
 #butonEnviar{
-    font-family: Arial, sans-serif;
-    position: absolute;
-    bottom: 36%;
-    left: 42%;
-    
+    font-family: Arial, sans-serif;  
 }
-#butonCancelar{
-   font-family: Arial, sans-serif;
-   position: absolute;
-    bottom: 36%;
-    left: 52%; 
+#butonLimpar{
+    font-family: Arial, sans-serif;
 }
 
 #interface{
