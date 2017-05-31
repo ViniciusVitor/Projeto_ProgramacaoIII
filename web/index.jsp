@@ -13,40 +13,41 @@
         <link rel="stylesheet" href="../css/index.css">
     </head>
     <body background="../imagens/absorvente-interno-externo.jpg"> 
-        <form id="Formulario" action="MyServlet">
-                <div id="interface">
-                    <header id="cabecalho">
-                        <h2 id="mensagem">Olá! Obrigado por fazer parte dessa pesquisa!</br>
-                            Por favor, responda as questões de maneira séria!.
-                        </h2>
-                    </header>
-                    <center>
-                        <div id="campos">
-                            <h4>Nome: </br><input type="text" name="nome" value="" size="50" id="nome"/></h4>
-                            <h4>Idade: </br><input type="text" name="idade" value="" size="2" id="idade"/></h4>
-                            <h4>Ciclo Menstrual: </br><select name="ciclo" id="ciclo">
-                                    <option>.......</option>
-                                    <option>Regular</option>
-                                    <option>Inregular</option>
-                                </select></h4>
+        <form id="Formulario" action="MyServlet" method="POST">
+            <div id="interface">
+                <header id="cabecalho">
+                    <h2 id="mensagem">Olá! Obrigado por fazer parte dessa pesquisa!</br>
+                        Por favor, responda as questões de maneira séria!.
+                    </h2>
+                </header>
+                <center>
+                    <div id="campos">
+                        <h4>Nome: </br><input type="text" name="nome" value="" size="50" id="nome" max="60"/></h4>
+                        <h4>Idade: </br><input type="number" name="idade" value="" size="2" id="idade" max="45" min="9"/></h4>
+                        <h4>Ciclo Menstrual: </br><select name="ciclo" id="ciclo">
+                                <option>Regular</option>
+                                <option>Irregular</option>
+                            </select></h4>
 
-                            <h4>Data da última menstruação: </br><input type="date" name="data" value="" id="data"/></h4>
-                            </br>
-                        </div>                      
-                    </center>
+                        <h4>Data da última menstruação: </br><input type="date" name="data" id="data"></h4>
+                        </br>
+                    </div>                      
+                </center>
+
+                <div id="botoes">
                     
-                    <div id="botoes">
-                            <input type="submit" value="Enviar respostas" name="Enviar" id="butonEnviar"/>
-                            <input type="submit" value="Cancelar" name="Cancelar" id="butonCancelar" />
-                            
-                            <div>
-                                 <br/>
-                                 <br/>
-                                <footer id="rodape">Alef, Bianca, Matheus e Vinicius</footer>
-                            </div>
+                    <input type="submit" value="Enviar respostas" name="Enviar" id="butonEnviar"/>
+                    <input type="reset" value="Limpar" name="Limpar" id="butonLimpar" />
+   
+
+                    <div>
+                        <br/>
+                        <br/>
+                        <footer id="rodape">Alef, Bianca, Matheus e Vinicius</footer>
                     </div>
-                        
                 </div>
+
+            </div>
         </form>
     </body>
 </html>
